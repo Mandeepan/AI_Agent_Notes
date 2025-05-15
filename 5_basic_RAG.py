@@ -13,7 +13,7 @@ client = genai.Client(api_key=GOOGLE_API_KEY)
 
 ### STEP 0: PREPARING MODEL CONFIG and DATA for vector database ###
 
-# show the current models available to for the current API KEY user role
+# show the current available models that support the embedContent function
 for m in client.models.list():
     if "embedContent" in m.supported_actions:
         print(m.name)
